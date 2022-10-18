@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Winlock",
+  "description": "A chrome extension to lock a window so no tabs will be opened on it.",
+  "version": "1.0",
+  "permissions": ["tabs"],
+  "action": {
+    "default_icon": "unlocked.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
