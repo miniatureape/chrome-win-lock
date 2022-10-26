@@ -25,6 +25,11 @@ chrome.action.onClicked.addListener((tab) => {
 chrome.tabs.onCreated.addListener((tab) => {
     let icon;
     console.log('tab was created', winStatus);
+
+    if (Object.keys(winStatus).length === 0) {
+        console.log('there is no win status state', winStatus);
+    }
+
     if (winStatus[tab.windowId]) {
         console.log('tab was created on locked window');
         chrome.windows.getAll((windows) => {
